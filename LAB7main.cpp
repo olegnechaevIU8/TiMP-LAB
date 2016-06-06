@@ -17,7 +17,13 @@ int main()
 	void(*del) ();
 
 	if (lib == "LAB7Queue.dll") h = LoadLibrary(TEXT("LAB7Queue.dll"));
-	if (lib == "LAB&PrQueue.dll") h = LoadLibrary(TEXT("LAB7PrQueue.dll"));
+	if (lib == "LAB7PrQueue.dll") h = LoadLibrary(TEXT("LAB7PrQueue.dll"));
+	if (!h)
+	{
+		printf("wrong library name\n");
+		system("pause");
+		return 0;
+	}
 	else 
 	{
 		int N;
